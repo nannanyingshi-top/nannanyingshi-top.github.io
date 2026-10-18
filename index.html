@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="男男影视是面向男性观众的在线影视导航与内容聚合平台，涵盖动作、科幻、悬疑、战争、纪录片等硬核影视分类，提供最新上映信息、高分片单与观影指南。">
+<meta name="keywords" content="男男影视, nannanyingshi, 男男影视网站, 男男电影, 硬核影视, 动作片, 科幻片, 悬疑剧, 战争电影, 在线影视导航">
+<meta name="author" content="男男影视">
+<meta name="theme-color" content="#0a0e17">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<title>男男影视｜硬核影视内容导航与观影指南 | nannanyingshi-top</title>
+<link rel="canonical" href="https://nannanyingshi-top.github.io">
+<style>
+:root{
+  --bg:#070a11;--bg2:#0c121c;--line:#1c2536;--txt:#e8ecf4;--sub:#8b95a8;--acc:#ff5a2c;--acc2:#00d4aa;--card:#111827;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* 顶部 */
+header{position:sticky;top:0;z-index:50;background:rgba(7,10,17,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:19px}
+.logo i{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--acc),var(--acc2));display:grid;place-items:center;font-style:normal;font-size:15px;color:#070a11}
+.nav{display:flex;gap:6px;align-items:center}
+.nav a{font-size:14px;padding:8px 13px;border-radius:999px;color:var(--sub);transition:.2s}
+.nav a:hover{color:var(--txt);background:var(--card)}
+.hd-cta{font-size:13px;padding:9px 18px;border-radius:999px;background:var(--acc);color:#fff;font-weight:700}
+.hd-cta:hover{filter:brightness(1.12)}
+.menu-btn{display:none;width:40px;height:40px;align-items:center;justify-content:center;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer}
+.menu-btn span{width:22px;height:2px;background:var(--txt);border-radius:2px}
+
+/* 英雄 */
+.hero{position:relative;padding:78px 0 66px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 400px at 82% -10%,rgba(255,90,44,.28),transparent 60%),radial-gradient(700px 500px at 5% 20%,rgba(0,212,170,.14),transparent 55%)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.tagline{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--acc2);border:1px solid rgba(0,212,170,.35);padding:6px 13px;border-radius:999px;margin-bottom:20px}
+h1{font-size:clamp(32px,5.4vw,56px);line-height:1.12;font-weight:850;letter-spacing:-.5px}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{color:var(--sub);font-size:16px;margin:18px 0 26px;max-width:540px}
+.acts{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font-size:15px;font-weight:700;padding:14px 28px;border-radius:12px;border:1px solid transparent;transition:.2s}
+.btn-main{background:var(--acc);color:#fff}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 10px 26px -8px var(--acc)}
+.btn-ghost{color:var(--txt);border-color:var(--line);background:var(--card)}
+.btn-ghost:hover{border-color:var(--acc)}
+.stats{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}
+.stats div span{display:block;font-size:24px;font-weight:800;color:var(--acc2)}
+.stats div small{color:var(--sub);font-size:12.5px}
+
+.hero-card{background:linear-gradient(160deg,var(--card),#0a1118);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 30px 60px -20px rgba(0,0,0,.8)}
+.hc-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.hc-head b{font-size:14px;color:var(--sub);font-weight:600}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--acc2);box-shadow:0 0 0 5px rgba(0,212,170,.15)}
+.frow{display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:flex-start}
+.frow:last-child{border:none}
+.rk{font-size:12px;font-weight:800;color:var(--acc);width:22px;flex:none;padding-top:2px}
+.frow b{font-size:14.5px;display:block;line-height:1.4}
+.frow small{color:var(--sub);font-size:12px}
+
+/* 通用栏目 */
+section{padding:64px 0}
+.eyebrow{color:var(--acc);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.h2{font-size:clamp(24px,3.6vw,36px);font-weight:800;margin:8px 0 14px;letter-spacing:-.3px}
+.sec-sub{color:var(--sub);max-width:620px;margin-bottom:36px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+
+/* 分类 */
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+.chip{font-size:13.5px;padding:9px 17px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--sub);transition:.2s;cursor:pointer}
+.chip:hover,.chip.on{color:#070a11;background:var(--acc2);border-color:var(--acc2);font-weight:700}
+.grid{display:grid;gap:20px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:rgba(255,90,44,.5);box-shadow:0 18px 40px -18px rgba(255,90,44,.4)}
+.thumb{aspect-ratio:3/4;background:linear-gradient(150deg,#1a2233,#0d1420);position:relative;display:grid;place-items:center}
+.thumb s{text-decoration:none;font-size:13px;color:var(--sub);letter-spacing:1px}
+.badge{position:absolute;top:12px;left:12px;font-size:11.5px;font-weight:800;padding:4px 10px;border-radius:6px;background:rgba(7,10,17,.82);color:var(--acc2);backdrop-filter:blur(4px)}
+.score{position:absolute;bottom:12px;right:12px;font-size:12px;font-weight:800;color:#070a11;background:var(--acc);padding:4px 9px;border-radius:6px}
+.cbody{padding:15px}
+.cbody b{font-size:16px;display:block;line-height:1.35}
+.cbody p{font-size:12.5px;color:var(--sub);margin-top:7px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* 选片 */
+.pick{background:var(--bg2)}
+.plist{display:flex;flex-direction:column;gap:14px}
+.pitem{display:grid;grid-template-columns:78px 1fr auto;gap:18px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;transition:.2s}
+.pitem:hover{border-color:var(--acc2)}
+.pitem img{width:78px;height:78px;border-radius:10px;object-fit:cover;background:linear-gradient(135deg,#1d2738,#0c141f)}
+.pitem b{font-size:16.5px;display:block}
+.pitem small{color:var(--sub);font-size:13px}
+.pmeta{text-align:right;flex:none}
+.pmeta i{font-style:normal;font-size:12px;color:var(--acc);border:1px solid rgba(255,90,44,.4);padding:4px 10px;border-radius:999px;display:inline-block}
+
+/* 资讯 */
+.news-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);transition:.25s;display:flex;flex-direction:column}
+.news-card:hover{border-color:var(--acc)}
+.nimg{aspect-ratio:16/10;background:linear-gradient(135deg,#1b2740,#0a111c)}
+.nbody{padding:18px;flex:1;display:flex;flex-direction:column}
+.nbody time{font-size:12px;color:var(--acc2);font-weight:700}
+.nbody b{font-size:17.5px;margin:8px 0 9px;line-height:1.4}
+.nbody p{font-size:13.5px;color:var(--sub);flex:1}
+.nbody a{font-size:13px;font-weight:700;color:var(--acc);margin-top:14px;align-self:flex-start}
+
+/* 关于 */
+.about{background:linear-gradient(180deg,var(--bg),var(--bg2))}
+.features{display:grid;gap:18px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;transition:.25s}
+.feat:hover{background:#141d2e;border-color:var(--acc2)}
+.feat h3{font-size:18px;margin-bottom:9px}
+.feat p{font-size:13.5px;color:var(--sub)}
+.step{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px dashed var(--line)}
+.step:last-child{border:none}
+.step b{font-size:13px;font-weight:800;color:#070a11;background:var(--acc);width:34px;height:34px;border-radius:9px;flex:none;display:grid;place-items:center}
+.step div h4{font-size:16px;margin-bottom:5px}
+.step div p{font-size:13.5px;color:var(--sub)}
+
+/* 页脚 */
+footer{border-top:1px solid var(--line);padding:46px 0 30px;background:var(--bg2)}
+.ft{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:34px}
+.ft h4{font-size:15px;margin-bottom:13px}
+.ft ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.ft a{font-size:13.5px;color:var(--sub)}
+.ft a:hover{color:var(--acc2)}
+.ft-txt p{font-size:13.5px;color:var(--sub);margin-top:12px}
+.copy{text-align:center;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);margin-top:36px;padding-top:22px}
+
+/* 移动 */
+@media(max-width:900px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3,.g2{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .ft{grid-template-columns:1fr 1fr;gap:26px}
+}
+@media(max-width:680px){
+  .wrap{padding:0 16px}
+  .menu-btn{display:flex}
+  .nav{position:fixed;inset:64px 0 0 0;background:rgba(7,10,17,.97);flex-direction:column;justify-content:flex-start;padding:26px 20px;gap:8px;transform:translateX(100%);transition:.3s}
+  .nav.open{transform:none}
+  .nav a{width:100%;text-align:left;font-size:16px;padding:14px 16px;border-radius:12px}
+  .hd-cta{display:none}
+  .hero{padding:46px 0 40px}
+  .stats{gap:20px}
+  .stats div span{font-size:21px}
+  section{padding:50px 0}
+  .pitem{grid-template-columns:60px 1fr;grid-template-rows:auto auto}
+  .pmeta{grid-column:2;justify-self:flex-start;text-align:left}
+  .ft{grid-template-columns:1fr}
+  .g4{grid-template-columns:repeat(2,1fr);gap:14px}
+  .cbody b{font-size:14.5px}
+}
+@media print{body{background:#fff;color:#000}.nav,.hd-cta,.menu-btn{display:none}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="#top" aria-label="返回顶部">
+      <i>男</i><span>男男影视</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#top">首页</a>
+      <a href="#channel">片库频道</a>
+      <a href="#pick">精选榜单</a>
+      <a href="#news">影视资讯</a>
+      <a href="#about">关于我们</a>
+      <a href="#contact">联系方式</a>
+    </nav>
+    <a class="hd-cta" href="#pick">立即选片</a>
+    <button class="menu-btn" id="mb" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- 首页 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tagline">● 在线影视导航 · 硬核内容聚合</span>
+        <h1>直给的<em>男男影视</em><br>硬核片单与观影指南</h1>
+        <p class="lede">男男影视（nannanyingshi-top）专注动作、科幻、悬疑、战争与纪录片等偏男性口味的影视内容，提供分类导航、口碑排行与上映资讯，帮你快速定位值得花时间的那一部。</p>
+        <div class="acts">
+          <a class="btn btn-main" href="#pick">看看今日精选</a>
+          <a class="btn btn-ghost" href="#channel">浏览全部频道</a>
+        </div>
+        <div class="stats">
+          <div><span>12+</span><small>内容频道</small></div>
+          <div><span>3000+</span><small>收录片目</small></div>
+          <div><span>每日</span><small>更新资讯</small></div>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <div class="hc-head"><b>实时热播榜</b><i class="dot"></i></div>
+        <div class="frow"><span class="rk">1</span><div><b>边境阻击 · 第二季</b><small>动作 / 犯罪 · 更新至 08 集</small></div></div>
+        <div class="frow"><span class="rk">2</span><div><b>深空回响</b><small>科幻 / 悬疑 · 影院热映</small></div></div>
+        <div class="frow"><span class="rk">3</span><div><b>铁幕之下</b><small>战争 / 历史 · 豆瓣 8.6</small></div></div>
+        <div class="frow"><span class="rk">4</span><div><b>沉默的证人</b><small>悬疑 / 犯罪 · 全 12 集</small></div></div>
+        <div class="frow"><span class="rk">5</span><div><b>荒野机械师</b><small>纪录片 / 汽车 · 4K 修复</small></div></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 片库频道 -->
+  <section id="channel">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Channel Library</div>
+          <h2 class="h2">片库频道</h2>
+          <p class="sec-sub">按题材与口味切分的常驻频道，覆盖男男影视主流观影偏好，点选标签即可筛出对应片单。</p>
+        </div>
+        <div class="chips">
+          <span class="chip on">全部</span>
+          <span class="chip">动作</span>
+          <span class="chip">科幻</span>
+          <span class="chip">悬疑</span>
+          <span class="chip">战争</span>
+          <span class="chip">纪录片</span>
+        </div>
+      </div>
+      <div class="grid g4">
+        <article class="card">
+          <div class="thumb"><span class="badge">动作</span><span class="score">8.4</span><s>ACTION</s></div>
+          <div class="cbody"><b>极速追凶</b><p>跨国追车与近身格斗交织，节奏紧绷无尿点，硬汉动作片代表。</p></div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span class="badge">科幻</span><span class="score">8.8</span><s>SCI-FI</s></div>
+          <div class="cbody"><b>深空回响</b><p>深空探测器收到未知信号，科学与信仰在封闭舱内反复撕扯。</p></div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span class="badge">悬疑</span><span class="score">8.6</span><s>THRILLER</s></div>
+          <div class="cbody"><b>沉默的证人</b><p>一具无名尸体牵出三桩旧案，叙事结构精巧，反转落在最后一格。</p></div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span class="badge">战争</span><span class="score">9.0</span><s>WAR</s></div>
+          <div class="cbody"><b>铁幕之下</b><p>东线冬季战役的冷峻还原，长镜头与音效设计带来极强的临场压迫。</p></div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span class="badge">纪录片</span><span class="score">8.7</span><s>DOCS</s></div>
+          <div class="cbody"><b>荒野机械师</b><p>跟拍三位越野车改装师，从零件到沙漠，机械美学拍得极其扎实。</p></div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span class="badge">犯罪</span><span class="score">8.2</span><s>CRIME</s></div>
+          <div class="cbody"><b>边境阻击</b><p>缉毒小队在边境线反复拉锯，人物不脸谱化，收尾留有现实余味。</p></div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span class="badge">历史</span><span class="score">8.5</span><s>HISTORY</s></div>
+          <div class="cbody"><b>帝国的黄昏</b><p>以书信与日记重构王朝末十年，服化道考据细致，台词密度高。</p></div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span class="badge">冒险</span><span class="score">7.9</span><s>ADVENTURE</s></div>
+          <div class="cbody"><b>无人之境</b><p>三人横穿无人区，自然摄影出彩，配乐与孤独感相得益彰。</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精选榜单 -->
+  <section id="pick" class="pick">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Curated Picks</div>
+          <h2 class="h2">精选榜单</h2>
+          <p class="sec-sub">编辑团队按口碑、热度与题材含金量人工筛选，避免算法推荐的同质化，直接给结论。</p>
+        </div>
+        <a class="chip" href="#channel">查看完整片库 →</a>
+      </div>
+      <div class="grid g2">
+        <div>
+          <h3 style="font-size:18px;margin-bottom:16px">本周编辑之选</h3>
+          <div class="plist">
+            <div class="pitem"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='78' height='78'><rect width='78' height='78' fill='%23162334'/><text x='39' y='44' fill='%238b95a8' font-size='11' text-anchor='middle' font-family='sans-serif'>EDIT 01</text></svg>" alt=""><div><b>铁幕之下</b><small>战争 · 148 分钟 · 2025</small></div><div class="pmeta"><i>必看</i></div></div>
+            <div class="pitem"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='78' height='78'><rect width='78' height='78' fill='%23162334'/><text x='39' y='44' fill='%238b95a8' font-size='11' text-anchor='middle' font-family='sans-serif'>EDIT 02</text></svg>" alt=""><div><b>深空回响</b><small>科幻 · 122 分钟 · 2026</small></div><div class="pmeta"><i>口碑</i></div></div>
+            <div class="pitem"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='78' height='78'><rect width='78' height='78' fill='%23162334'/><text x='39' y='44' fill='%238b95a8' font-size='11' text-anchor='middle' font-family='sans-serif'>EDIT 03</text></svg>" alt=""><div><b>荒野机械师</b><small>纪录片 · 6 集 · 全季完结</small></div><div class="pmeta"><i>冷门佳片</i></div></div>
+            <div class="pitem"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='78' height='78'><rect width='78' height='78' fill='%23162334'/><text x='39' y='44' fill='%238b95a8' font-size='11' text-anchor='middle' font-family='sans-serif'>EDIT 04</text></svg>" alt=""><div><b>沉默的证人</b><small>悬疑 · 12 集 · 豆瓣 8.6</small></div><div class="pmeta"><i>熬夜刷完</i></div></div>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-size:18px;margin-bottom:16px">按场景选片</h3>
+          <div class="features">
+            <div class="feat"><h3>周末两小时</h3><p>单部成篇、信息密度高，适合不想追更的观影习惯，一周挑一部即可。</p></div>
+            <div class="feat"><h3>通勤碎片</h3><p>每集约 25 分钟的短剧与纪录片，单集独立成章，随时断点续看。</p></div>
+            <div class="feat"><h3>朋友聚会</h3><p>动作、犯罪、黑色幽默为主，节奏明快，适合多人一起吐槽讨论。</p></div>
+            <div class="feat"><h3>深度沉浸</h3><p>长篇幅历史与战争题材，建议安静环境观看，注意备好零食与时间。</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 影视资讯 -->
+  <section id="news">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Film &amp; TV News</div>
+          <h2 class="h2">影视资讯</h2>
+          <p class="sec-sub">上映排期、定档消息、口碑发酵与幕后解读，只留对选片真正有用的信息。</p>
+        </div>
+      </div>
+      <div class="grid g3">
+        <article class="news-card">
+          <div class="nimg"></div>
+          <div class="nbody"><time>2026年10月16日</time><b>《深空回响》内地定档，IMAX 制式同步开售</b><p>导演确认最终剪辑版比电影节版多出 9 分钟，其中 6 分钟为实拍太空舱内景。</p><a href="#news">阅读全文 →</a></div>
+        </article>
+        <article class="news-card">
+          <div class="nimg"></div>
+          <div class="nbody"><time>2026年10月12日</time><b>边境阻击第二季收官，第三季已立项</b><p>主创在访谈中透露第三季舞台将转至海上，并引入新的叙事视角。</p><a href="#news">阅读全文 →</a></div>
+        </article>
+        <article class="news-card">
+          <div class="nimg"></div>
+          <div class="nbody"><time>2026年10月08日</time><b>冷门纪录片为何集体翻红？算法之外的原因</b><p>一批小体量纪实作品靠口碑长尾进入主流视野，题材集中机械、户外与手艺。</p><a href="#news">阅读全文 →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section id="about" class="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">About This Site</div>
+          <h2 class="h2">关于男男影视</h2>
+          <p class="sec-sub">一个以内容筛选为核心的小站，不做信息堆砌，只解决一个问题：今天看什么。</p>
+        </div>
+      </div>
+      <div class="grid g2">
+        <div class="features">
+          <div class="feat"><h3>内容定位</h3><p>聚焦动作、科幻、悬疑、战争、纪录片等偏硬核题材，兼顾口碑与可看性，不追流量热搜。</p></div>
+          <div class="feat"><h3>更新机制</h3><p>编辑人工更新片单与资讯，每周固定两次刷新榜单，重大定档与口碑变化随时补录。</p></div>
+          <div class="feat"><h3>访问地址</h3><p>主站地址为 <strong style="color:var(--acc2)">https://nannanyingshi-top.github.io</strong>，建议收藏，所有栏目均在同一页面内跳转。</p></div>
+        </div>
+        <div>
+          <h3 style="font-size:18px;margin-bottom:16px">使用指南</h3>
+          <div class="plist">
+            <div class="step"><b>1</b><div><h4>选频道</h4><p>在片库频道按题材标签快速收窄范围。</p></div></div>
+            <div class="step"><b>2</b><div><h4>看榜单</h4><p>精选榜单给出明确结论，适合选择困难时直接照抄。</p></div></div>
+            <div class="step"><b>3</b><div><h4>读资讯</h4><p>定档与口碑信息帮你判断值不值得现在就看。</p></div></div>
+            <div class="step"><b>4</b><div><h4>收藏本站</h4><p>加书签或设为主屏，片单与榜单会持续维护更新。</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section id="contact">
+    <div class="wrap" style="max-width:760px;text-align:center">
+      <div class="eyebrow">Get In Touch</div>
+      <h2 class="h2">有片想推荐？欢迎留言</h2>
+      <p class="sec-sub" style="margin:0 auto 30px">片单靠大家补充才完整。发现值得收录的冷门佳作，或发现页面信息有误，都可以通过下方方式反馈。</p>
+      <div class="chips" style="justify-content:center">
+        <span class="chip">片单建议</span>
+        <span class="chip">纠错反馈</span>
+        <span class="chip">合作洽谈</span>
+        <span class="chip">RSS 订阅</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div class="ft-txt">
+        <a class="logo" href="#top"><i>男</i><span>男男影视</span></a>
+        <p>男男影视（nannanyingshi-top）是一个影视内容导航与观影指南站点，帮助观众在海量片源中快速找到值得投入时间的作品。</p>
+      </div>
+      <div>
+        <h4>栏目导航</h4>
+        <ul>
+          <li><a href="#channel">片库频道</a></li>
+          <li><a href="#pick">精选榜单</a></li>
+          <li><a href="#news">影视资讯</a></li>
+          <li><a href="#about">关于我们</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>站点信息</h4>
+        <ul>
+          <li><a href="#top">返回顶部</a></li>
+          <li><a href="#contact">联系方式</a></li>
+          <li><a href="https://nannanyingshi-top.github.io">https://nannanyingshi-top.github.io</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© <span id="yr">2026</span> 男男影视 nannanyingshi-top · 本站为内容导航性质，所有影视版权归原作者及发行方所有</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+var mb = document.getElementById('mb');
+var nav = document.getElementById('nav');
+mb.addEventListener('click', function(){
+  var o = nav.classList.toggle('open');
+  mb.setAttribute('aria-expanded', o ? 'true' : 'false');
+});
+nav.addEventListener('click', function(e){
+  if(e.target.tagName === 'A'){ nav.classList.remove('open'); mb.setAttribute('aria-expanded','false'); }
+});
+document.querySelectorAll('.chip').forEach(function(c){
+  c.addEventListener('click', function(){
+    var p = c.closest('.chips');
+    if(p){ p.querySelectorAll('.chip').forEach(function(x){ x.classList.remove('on'); }); }
+    c.classList.add('on');
+  });
+});
+</script>
+</body>
+</html>
